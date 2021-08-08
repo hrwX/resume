@@ -8,35 +8,71 @@
 %	CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
-
+  \cventry
+    {Senior Developer} % Job title
+    {Bloomstack Technologies Pvt Ltd.} % Organization
+    {Mumbai, India} % Location
+    {September. 2020 - August. 2021} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Bloomtrace}
+            \begin{itemize}
+                \item {Bloomtrace is a platform as a service (PaaS) that automates and abstracts the complexity of US government regulatory compliance and acts as an immutable ledger, making it much easier for businesses to comply with policies during audits.}
+                \item {Bloomtrace paired up with Bloomstack ERP automates reporting and fetching transactions to and from US government's regulatory systems.}
+            \end{itemize}
+        \item {Frappe Framework}
+            \begin{itemize}
+                \item {Time zones}
+                    \begin{itemize}
+                        \item {The system saved datetime in the user's timezone when users from multiple timezones interacted with the system. As a result, the database had multiple datetime objects from multiple timezones that were saved without any timezone information.}
+                        \item {After refactoring the timezone APIs, datetime is now saved in UTC in the database, and timezone-aware datetime objects are used internally in templates and forms to convert them to the end user's time zone.}
+                    \end{itemize}
+                \item {Decimal Precision}
+                    \begin{itemize}
+                        \item {Decimal precision determined the number of decimal places to display in the Currency and Float field types. Before saving decimal numbers in the database, the system rounded them off, causing rounding issues in calculations if the precision was set too low.}
+                        \item {The Precision API refactored such that decimals were saved in the database with high precision without rounding them, and the values rounded off while displaying them in templates and forms.}
+                    \end{itemize}
+            \end{itemize}
+      \end{cvitems}
+    } 
 %---------------------------------------------------------
   \cventry
     {Software Developer} % Job title
     {Frappe Technologies Pvt Ltd.} % Organization
     {Mumbai, India} % Location
-    {September. 2018 - Present} % Date(s)
+    {September. 2018 - August. 2020} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Scaling Frappe Framework at //Seibert //Media.}
+        \item {Scaling Frappe Framework at //Seibert /Media}
             \begin{itemize}
                 \item {Engineered a custom solution for minimizing Frappe ORM bottlenecks for continuous data insertion from an external system.}
-                \item {Set up an up-time monitoring system with their existing infrastructure to monitor ERPNext deployment.}
-                \item {Led training on Frappe Framework customization training for consultants and developers.}
-                \item {Lead Developer for various //Seibert //Media core features and fixes for Frappe Framework and ERPNext.}
+                \item {Set up an up-time monitoring system with their existing infrastructure to monitor Frappe and ERPNext deployment.}
+                \item {Led training on Frappe Framework customization for consultants and developers.}
+                \item {Lead Developer for various //Seibert /Media core features and bug fixes for Frappe Framework and ERPNext.}
             \end{itemize}
-        \item {In-App Support Infrastructure for ERPNext.com.}
+        \item {Frappe Framework}
             \begin{itemize}
-                \item {In-App Support was built to avoid Email service downtime and to make all the issues raised by the users of the client to be available in one place.}
-                \item {In-App Support Infrastructure is based on the publish-subscribe pattern.}
-                \item {Service Level Agreement was then introduced in the core product which helped clients get their issues solved within the specified Service Level Agreement time.}
+                \item {Security}
+                    \begin{itemize}
+                        \item {When a user logged in for the first time, Framework has IP restriction restrictions in place. However, since the session was already initiated, the IP restriction policies did not validate the new IP when the user moved networks. A bug fix was released to apply IP restriction regulations whenever a session was being established or re-established.}
+                        \item {A Jinja template-related bug allowed a user to inject and execute a malicious payload into the document. A bug fix was released to patch the Server-Side Template Injection vulnerability.}
+                    \end{itemize}
+                \item {Refactors and Optimizations}
+                    \begin{itemize}
+                        \item {The Framework can retrieve emails from email service providers, but it could not link the incoming email to multiple internal documents. It could not also create a new contact when an email is received from an unknown sender.The Communications and Contacts module refactor enabled linking incoming emails to multiple documents and easy management of contacts formed from incoming emails.}
+                        \item {Document Tags enabled users to add unique tags to a document, however owing to framework restrictions, users could not link a tag to several documents. The Tagging API rework improved the tagging process and ensured that a tag could be associated with numerous documents.}
+                    \end{itemize}    
+                \item {Integrations}
+                    \begin{itemize}
+                        \item {I have implemented various Google Integrations into the Frappe framework, eventually leading to ERPNext listing on the Google Workspace Marketplace.}
+                    \end{itemize}
             \end{itemize}
-        \item {Frappe Framework.}
+        \item {In-App Support Infrastructure for ERPNext Cloud and Self-Hosted}
             \begin{itemize}
-                \item {Security fixes like IP restrictions for users, SQLi for custom queries, SSTI for Jinja templating.}
-                \item {Incorporated essential GSuite Integration in Frappe and listed ERPNext (Framework) on GSuite Marketplace.}
-                \item {Refactored Communication API to making it easier to link communications across the framework.}
-                \item {Optimizing data loading and caching for different for various views and reports offered by the framework.}
-                \item {Refactoring Global Search algorithms to improve search results and displaying results according.}
+                \item {Frappe struggled with providing adequate support to customers over emails.}
+                \item {To improve customer support, I built In-App Support, reducing support servicing overhead by 80\%, ensuring higher availability and faster resolution for all issues raised by clients.}
+                \item {In-App Support provided a portal in their ERPNext instance to raise and track issues raised by them.}
+                \item {The Support module in ERPNext was further refactored, and Service Level Agreements were introduced into ERPNext, resulting in enhanced support pipelines and efficiency, as well as a better understanding of resolution time frames.}
             \end{itemize}
       \end{cvitems}
     }

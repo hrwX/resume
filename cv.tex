@@ -21,7 +21,7 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-emerald}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -41,47 +41,41 @@
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
+% \photo[rectangle,edge,right]{./examples/profile}
 \name{Himanshu}{Warekar}
-\position{DEveloper}
-\address{Thane, 400605, Maharashtra, India}
+\position{Developer}
+\address{}
 
 \mobile{(+91) 975-709-4834}
 \email{himanshuwarekar@yahoo.com}
 % \homepage{}
 \github{hrwx}
 \linkedin{himanshu-warekar}
-
-\quote{``Be the change that you want to see in the world."}
-
-
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {}
-  {Himanshu Warekar~~~·~~~Curriculum Vitae}
+  {Himanshu Warekar~~~·~~~CV}
   {}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/experience.tex}
-\input{cv/projects.tex}
-\input{cv/skills.tex}
-\input{cv/education.tex}
-\input{cv/extracurricular.tex}
+\input{resume/experience.tex}
+\input{resume/projects.tex}
+\input{resume/skills.tex}
+\input{resume/education.tex}
+\input{resume/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------
