@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author : Himanshu Warekar
+% Based off of: https://github.com/hrwx/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks,draft=false]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \begin{document}
+
+
+% \begin{center}
+%     {\Huge \scshape Himanshu Warekar} \\ 
+%     \vspace{1pt}
+%     Postgraduate Apartment, DCU Campus Residences, Ballymun Road, D09 W6Y4 \\ 
+%     \vspace{1pt}
+%     \small \raisebox{-0.1\height}\faPhoneSquare\ +353 089 483 1151 ~ 
+%     \href{mailto:warekar.himanshu@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  warekar.himanshu@gmail.com}~
+%     \href{https://linkedin.com/in/himanshu-warekar}{\raisebox{-0.2\height}\faLinkedin\ himanshu-warekar}  ~
+%     \href{https://github.com/hrwX}{\raisebox{-0.2\height}\faGithub\ hrwX}
+%     \vspace{-8pt}
+
+
+% % \input{resume/experience.tex}
+% % \input{resume/education.tex}
+% % \input{resume/projects.tex}
+% % \input{resume/skills.tex}
+% % \input{resume/extracurricular.tex}
+
+% \end{document}
+
+% \documentclass{oxmathletter} % if using pdflatex
+%\documentclass[xelatex]{oxmathletter} % if using xelatex
+%
+%following options can be combined if desired and used with xelatex option
+%\documentclass[cmrbody]{oxmathletter} % use computer modern roman font
+%\documentclass[nofoundrysterling]{oxmathletter} % don't have the oxford font
+
+% \signature{Frank R. Action} % your name as you want it to appear as signature
+
+% This document class should only be used for official departmental business
+% As such the option defaults are the official departmental general contact
+% details. Defaults should only be overridden with your personal official 
+% departmental contact details
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %optional commands to override defaults
+% %do not include these commands if you wish to stick with the defaults
+% \position{Head of Sums} % your role/position, default none shown
+
+% \phone{251364}   % your direct phone number (area code is added automatically)
+%                  % default none shown
+
+% \fax{270515}     % fax number (area code is added automatically)
+%                  % defaults to St Giles reception fax
+
+% \econtact{frank.action}  % your official (long format) maths e-mail address 
+%                          % without @maths.ox.ac.uk 
+%                          % this will produce your official email address
+%                          % and the URL of your official web profile page
+
+% \refcode{MIIT/2013/17A} % optional reference code to specify on letter
+%                         % default none shown
+
+% %\researchgroup{Oxford Centre for Mundane Mathematics} % specify a research 
+%                                                       % group name to show 
+%                                              %above "Mathematical Institute"
+
+% %end of optional commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Himanshu Warekar} \\ 
+    % \vspace{1pt}
+    % Postgraduate Apartment, DCU Campus Residences, Ballymun Road, D09 W6Y4 \\ 
+    % \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhoneSquare\ +353 89 483 1151 ~ 
+    \href{mailto:warekar.himanshu@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  warekar.himanshu@gmail.com}~
+    \href{https://linkedin.com/in/himanshu-warekar}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/himanshu-warekar}  ~
+    \href{https://github.com/hrwX}{\raisebox{-0.2\height}\faGithub\ github.com/hrwx}
+    \vspace{-8pt}
+\end{center}
+
+\vspace{15pt}
+\begin{letter} {
+**************** \\  
+Ireland \\
+}
+\vspace{15pt}
+\opening{Dear Recruiter, \\}
+\vspace{15pt}
+    \quad \quad I am writing regarding your job posting for a Graduate Software Developer. As a candidate with close to 3 years of experience in software development, I am highly skilled in Python, Javascript, SQL, and tackling core issues in the product, evident from my work experiences and my GitHub (github.com/hrwx). Being patient, trusting, collaborating, and empathetic has allowed me to work alongside my team, with everyone performing exceptionally well.\\
+% \vspace{5pt} 
+%     \quad \quad The opportunity to join Pinterest greatly interests me is because of the passion the team has while building the Pinterest platform. The platform is a way of creative expression helping other people express their creativity. Be it the attention to detail with respect to UI/UX of the product or the scale at which the platform serves its users, it's fascinating.\\
+\vspace{5pt}
+    \quad \quad I am currently pursuing my Master in Computing at Dublin City University and graduating in August 2022. I hold a Bachelor of Engineering in Computer Engineering from the University of Mumbai.\\
+\vspace{5pt} 
+    \quad \quad As per my professional experience, my qualities and experience make me highly suitable for the role of ************** at *************. I am regarded as a core developer for Frappe Framework, powering ERPNext and Bloomstack ERP. I am proficient in Python, Javascript, and MariaDB since Frappe Framework is a Python Web Framework that uses Javascript for client-side operations and uses MariaDB as the database. Having worked on Open Source ERPs, ERPNext (erpnext.com) and Bloomstack (bloomstack.com) in a collaborative environment internally and with the community, I would make a valuable asset to your team. I offer my resume for your review.\\
+\vspace{5pt}
+    \quad \quad You are welcome to contact me. I thank you for your time and consideration and I look forward to hearing from you.\\
+\vspace{15pt}
+
+Regards,\\
+Himanshu Warekar
+\end{letter}
+\end{document}

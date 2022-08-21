@@ -1,79 +1,62 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
-\cvsection{Work Experience}
-
-
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
-\begin{cventries}
-  \cventry
-    {Senior Developer} % Job title
-    {Bloomstack Technologies Pvt Ltd.} % Organization
-    {Mumbai, India} % Location
-    {September. 2020 - August. 2021} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Bloomtrace}
-            \begin{itemize}
-                \item {Bloomtrace is a platform as a service (PaaS) that automates and abstracts the complexity of US government regulatory compliance and acts as an immutable ledger, making it much easier for businesses to comply with policies during audits.}
-                \item {Bloomtrace paired up with Bloomstack ERP automates reporting and fetching transactions to and from US government's regulatory systems.}
-            \end{itemize}
-        \item {Frappe Framework}
-            \begin{itemize}
-                \item {Time zones}
-                    \begin{itemize}
-                        \item {The system saved datetime in the user's timezone when users from multiple timezones interacted with the system. As a result, the database had multiple datetime objects from multiple timezones that were saved without any timezone information.}
-                        \item {After refactoring the timezone APIs, datetime is now saved in UTC in the database, and timezone-aware datetime objects are used internally in templates and forms to convert them to the end user's time zone.}
-                    \end{itemize}
-                \item {Decimal Precision}
-                    \begin{itemize}
-                        \item {Decimal precision determined the number of decimal places to display in the Currency and Float field types. Before saving decimal numbers in the database, the system rounded them off, causing rounding issues in calculations if the precision was set too low.}
-                        \item {The Precision API refactored such that decimals were saved in the database with high precision without rounding them, and the values rounded off while displaying them in templates and forms.}
-                    \end{itemize}
-            \end{itemize}
-      \end{cvitems}
-    } 
-%---------------------------------------------------------
-  \cventry
-    {Software Developer} % Job title
-    {Frappe Technologies Pvt Ltd.} % Organization
-    {Mumbai, India} % Location
-    {September. 2018 - August. 2020} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Scaling Frappe Framework at //Seibert /Media}
-            \begin{itemize}
-                \item {Engineered a custom solution for minimizing Frappe ORM bottlenecks for continuous data insertion from an external system.}
-                \item {Set up an up-time monitoring system with their existing infrastructure to monitor Frappe and ERPNext deployment.}
-                \item {Led training on Frappe Framework customization for consultants and developers.}
-                \item {Lead Developer for various //Seibert /Media core features and bug fixes for Frappe Framework and ERPNext.}
-            \end{itemize}
-        \item {Frappe Framework}
-            \begin{itemize}
-                \item {Security}
-                    \begin{itemize}
-                        \item {When a user logged in for the first time, Framework has IP restriction restrictions in place. However, since the session was already initiated, the IP restriction policies did not validate the new IP when the user moved networks. A bug fix was released to apply IP restriction regulations whenever a session was being established or re-established.}
-                        \item {A Jinja template-related bug allowed a user to inject and execute a malicious payload into the document. A bug fix was released to patch the Server-Side Template Injection vulnerability.}
-                    \end{itemize}
-                \item {Refactors and Optimizations}
-                    \begin{itemize}
-                        \item {The Framework can retrieve emails from email service providers, but it could not link the incoming email to multiple internal documents. It could not also create a new contact when an email is received from an unknown sender.The Communications and Contacts module refactor enabled linking incoming emails to multiple documents and easy management of contacts formed from incoming emails.}
-                        \item {Document Tags enabled users to add unique tags to a document, however owing to framework restrictions, users could not link a tag to several documents. The Tagging API rework improved the tagging process and ensured that a tag could be associated with numerous documents.}
-                    \end{itemize}    
-                \item {Integrations}
-                    \begin{itemize}
-                        \item {I have implemented various Google Integrations into the Frappe framework, eventually leading to ERPNext listing on the Google Workspace Marketplace.}
-                    \end{itemize}
-            \end{itemize}
-        \item {In-App Support Infrastructure for ERPNext Cloud and Self-Hosted}
-            \begin{itemize}
-                \item {Frappe struggled with providing adequate support to customers over emails.}
-                \item {To improve customer support, I built In-App Support, reducing support servicing overhead by 80\%, ensuring higher availability and faster resolution for all issues raised by clients.}
-                \item {In-App Support provided a portal in their ERPNext instance to raise and track issues raised by them.}
-                \item {The Support module in ERPNext was further refactored, and Service Level Agreements were introduced into ERPNext, resulting in enhanced support pipelines and efficiency, as well as a better understanding of resolution time frames.}
-            \end{itemize}
-      \end{cvitems}
-    }
-\end{cventries}
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+    \resumeSubHeadingListStart
+    
+    \resumeSubheading
+        {Software Developer (part-time) - Alyf GmbH}{November. 2021 - Present}
+        {\href{https://github.com/alyf-de}{github.com/alyf-de}}{Dublin, Ireland}
+        \resumeItemListStart
+            \resumeItem {ERPNext ({\href{https://github.com/frappe/erpnext}{github.com/frappe/erpnext}})}
+                \resumeItemListStart
+                    \resumeItem{Refactored the subscriptions module to fix incorrect invoices created, making it on par with other Subscription SaaS offerings. Reduce the code complexity and improve coverage for the subscriptions module by 18\%.}
+                \resumeItemListEnd
+            \resumeItem {Frappe Framework ({\href{https://github.com/frappe/frappe}{github.com/frappe/frappe}})}
+                \resumeItemListStart
+                    \resumeItem{Rebuilt the parts of the localization feature of the frappe framework for modules like the setup wizard, forms dashboards and the primary-secondary relationship field controller as certain elements were being incorrectly translated.}
+                \resumeItemListEnd
+            \resumeItem {Datatable ({\href{https://github.com/frappe/datatable}{github.com/frappe/datatable}})}
+                \resumeItemListStart
+                    \resumeItem{Implemented translation module in the datatable library to enable seamless integration in the Frappe Framework.}
+                \resumeItemListEnd
+        \resumeItemListEnd
+    \vspace{+8pt}
+    \resumeSubheading
+        {Senior Engineer - Bloomstack Technologies Pvt Ltd.}{September. 2020 - August. 2021}
+        {\href{https://github.com/Bloomstack}{github.com/Bloomstack}}{Mumbai, India}
+        \resumeItemListStart
+            \resumeItem{Mentored and supported a team of five developers, supervising all aspects of sprint planning, feature development, and bug fixes, increasing overall productivity by 15\% and improving the code quality and stability of the codebase by 11\%.}
+            \resumeItem {Bloomtrace}
+                \resumeItemListStart
+                    \resumeItem{Slashed the infrastructure expenses by 9\%, enhanced the system performance and throughput by 17\%, and eliminated downtime by redesigning Bloomtrace's architecture (PaaS to abstract and automate the complexity of the US government's cannabis compliance).}
+                \resumeItemListEnd
+            \resumeItem {Frappe Framework ({\href{https://github.com/Bloomstack/frappe}{github.com/Bloomstack/frappe}})}
+                \resumeItemListStart
+                    \resumeItem{Minimized the legal risks for customers that could arise due to incorrect datetime associated with time-sensitive documents like Contracts, Service Level Agreements, Sales, and Purchase Invoices, by overhauling the Timezone API and making datetime objects timezone aware.}
+                    \resumeItem{Eliminated the rounding-off issue faced by the customers during yearly auditing by refactoring the Precision API to save values in the database with high precision of 9 places.}
+                \resumeItemListEnd
+        \resumeItemListEnd
+    \vspace{+8pt}
+    \resumeSubheading
+        {Software Developer - Frappe Technologies Pvt Ltd.}{September. 2018 - August. 2020}
+        {\href{https://github.com/Frappe}{github.com/frappe}}{Mumbai, India}
+        \resumeItemListStart
+            \resumeItem{//Seibert /Media GmbH}
+                \resumeItemListStart
+                    \resumeItem{Managed and led the development for building //Seibert /Media core features and bug fixes for Frappe Framework and ERPNext for 1+ years.}
+                    \resumeItem{Engineered a custom solution for eliminating Frappe ORM bottlenecks and system downtimes for continued data insertion from external systems, cutting the infrastructure expenses by 20\%. Set up an up-time monitoring system with their existing infrastructure to monitor Frappe and ERPNext deployment in case of any downtime.}
+                \resumeItemListEnd
+            \resumeItem{In-App Support Infrastructure for ERPNext Cloud and Self-Hosted}
+                \resumeItemListStart
+                    \resumeItem{Restructured the support pipeline at Frappe Technologies and engineered an In-App Support Module, reducing L1 support servicing overhead by 23\% and improved support bug fixes by 15\%, ensuring higher availability and faster resolution for all issues raised by clients.}
+                \resumeItemListEnd
+            \resumeItem{ERPNext ({\href{https://github.com/frappe/erpnext}{github.com/frappe/erpnext}})}
+                \resumeItemListStart
+                    \resumeItem{Conceptualized and implemented Service Level Agreements in ERPNext's Support module, improving the module efficiency and user experience by 41\% and built dashboards for better customer support analytics.}
+                \resumeItemListEnd
+            \resumeItem{Frappe Framework ({\href{https://github.com/frappe/frappe}{github.com/frappe/frappe}})}
+                \resumeItemListStart
+                    \resumeItem{Strengthened IP security restrictions to enforce strict IP and session validation whenever the user tried to establish a session with the server.}
+                    \resumeItem{Refactored the Communications module to improve execution time by 6\% and allow for the easy linking of receiving emails to documents based on the unique document id embedded in the email id, allowing users to send emails from email providers and letting the framework link them to the relevant document.}
+                \resumeItemListEnd
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
